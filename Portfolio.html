@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Muhammad Usama</title>
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#1f242d;
+    color:#fff;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:25px 9%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1f242d;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#fff;
+    text-decoration:none;
+}
+
+.navbar ul{
+    display:flex;
+}
+
+.navbar ul li{
+    list-style:none;
+    margin-left:35px;
+}
+
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    transition:.4s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color:#7cf03d;
+}
+
+/* HEADER */
+
+.portfolio{
+    padding:140px 9% 60px;
+}
+
+.portfolio-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.portfolio-header h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.portfolio-header p{
+    font-size:20px;
+    color:#7cf03d;
+}
+
+/* FILTER BUTTONS */
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:50px;
+}
+
+.filter-btn{
+    padding:10px 25px;
+    background:transparent;
+    border:2px solid #7cf03d;
+    color:#7cf03d;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#7cf03d;
+    color:#1f242d;
+}
+
+/* PORTFOLIO GRID */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#2b313d;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #7cf03d;
+}
+
+
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#7cf03d;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#ccc;
+    font-size:14px;
+}
+
+/* VIDEO */
+
+.card img,
+.card video{
+    width:100%;
+    height:240px;
+    object-fit:contain;
+    background:#1f242d;
+    padding:5px;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal img{
+    max-width:90%;
+    max-height:90%;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar ul{
+        display:none;
+    }
+
+    .portfolio-header h1{
+        font-size:40px;
+    }
+
+    .portfolio-header p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a href="#" class="logo">Portfolio.</a>
+
+
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+</ul>
+
+
+</nav>
+
+<section class="portfolio">
+
+
+<div class="portfolio-header">
+    <h1>My Portfolio</h1>
+    <p>Here is some of my previous work.</p>
+</div>
+
+<div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="designs">Designs</button>
+    <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+    <button class="filter-btn" data-filter="video">Videos</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+</div>
+
+<div class="portfolio-grid">
+
+    <!-- DESIGNS -->
+
+    <div class="card designs">
+        <img src="images/project1.png" alt="">
+        <div class="card-content">
+            <h3>Trigger Finger</h3>
+            <p>Orthopedic disease awareness social media post.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Knee Crepitus.png" alt="">
+        <div class="card-content">
+            <h3>Knee crepitus</h3>
+            <p>Orthopedic disease awareness social media post.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Rotator.png" alt="">
+        <div class="card-content">
+            <h3>Knee crepitus</h3>
+            <p>Orthopedic disease awareness social media post.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Kyphosis.png" alt="">
+        <div class="card-content">
+            <h3>Knee crepitus</h3>
+            <p>Orthopedic disease awareness social media post.</p>
+        </div>
+    </div>
+
+    <div class="card designs">
+        <img src="images/project2.png" alt="">
+        <div class="card-content">
+            <h3>Sciatica vs Back Pain</h3>
+            <p>Creative orthopedic promotional design.</p>
+        </div>
+    </div>
+
+    <div class="card designs">
+        <img src="images/project3.png" alt="">
+        <div class="card-content">
+            <h3>Poster</h3>
+            <p>Professional  poster design.</p>
+        </div>
+    </div>
+
+    <div class="card designs">
+        <img src="images/Modern Tumbler .png" alt="">
+        <div class="card-content">
+            <h3>Modern Tumbler</h3>
+            <p>Promotional Tumbler Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Watch.png" alt="">
+        <div class="card-content">
+            <h3>Classic Watch</h3>
+            <p>Promotional Elegent Watch Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Cover Photo.png" alt="">
+        <div class="card-content">
+            <h3>Cover Design</h3>
+            <p>Promotional Elegent Cover Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Shopfinity logo.jpg" alt="">
+        <div class="card-content">
+            <h3>Logo Design</h3>
+            <p>Shopfinity logo Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/orthotalks logo.jpeg" alt="">
+        <div class="card-content">
+            <h3>Logo Design</h3>
+            <p>Orthotalks logo Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Germany 3.png" alt="">
+        <div class="card-content">
+            <h3>Promotional post</h3>
+            <p>Promotional Post Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Germany post 2.png" alt="">
+        <div class="card-content">
+            <h3>Promotional post</h3>
+            <p>Promotional Post Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Germany Post.png" alt="">
+        <div class="card-content">
+            <h3>Promotional post</h3>
+            <p>Promotional Post Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/PRP.png" alt="">
+        <div class="card-content">
+            <h3> PRP Standee</h3>
+            <p>Promotional Standee Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/Gel Injection.png" alt="">
+        <div class="card-content">
+            <h3>Gel Injection Standee</h3>
+            <p>Promotional Standee Design.</p>
+        </div>
+    </div>
+    <div class="card designs">
+        <img src="images/BillBoard.png" alt="">
+        <div class="card-content">
+            <h3>BillBoard</h3>
+            <p>BillBoard Design.</p>
+        </div>
+    </div>
+
+    <!-- MOTION GRAPHICS -->
+
+    <div class="card motion">
+        <video controls>
+            <source src="videos/Shopfinity Contact.mp4" type="video/mp4">
+        </video>
+        <div class="card-content">
+            <h3>Motion Graphics </h3>
+            <p>Animated Contact reel.</p>
+        </div>
+    </div>
+
+    <div class="card motion">
+        <video controls>
+            <source src="videos/Light.mp4" type="video/mp4">
+        </video>
+        <div class="card-content">
+            <h3>Medical Animation</h3>
+            <p>Motion graphics promotional project.</p>
+        </div>
+    </div>
+
+    <!-- VIDEO EDITING -->
+
+    <div class="card video">
+        <video controls>
+            <source src="videos/Posture.mp4" type="video/mp4">
+        </video>
+        <div class="card-content">
+            <h3>Video Editing Project</h3>
+            <p>Professional promotional video.</p>
+        </div>
+    </div>
+    <div class="card video">
+        <video controls>
+            <source src="videos/Orthotalks intro video .mp4" type="video/mp4">
+        </video>
+        <div class="card-content">
+            <h3>Video Editing Project</h3>
+            <p>Professional promotional video.</p>
+        </div>
+    </div>
+    <div class="card video">
+        <video controls>
+            <source src="videos/Podcast video 3.mp4" type="video/mp4">
+        </video>
+        <div class="card-content">
+            <h3>Video Editing Project</h3>
+            <p>Professional promotional video.</p>
+        </div>
+    </div>
+    <div class="card video">
+        <video controls>
+            <source src="videos/Ozone Therapy Vid.mp4" type="video/mp4">
+        </video>
+        <div class="card-content">
+            <h3>Video Editing Project</h3>
+            <p>Professional promotional video.</p>
+        </div>
+    </div>
+    <div class="card video">
+        <video controls>
+            <source src="videos/Benefits of Regular Exercise (1).mp4" type="video/mp4">
+        </video>
+        <div class="card-content">
+            <h3>Video Editing Project</h3>
+            <p>Professional promotional video.</p>
+        </div>
+    </div>
+    <div class="card video">
+        <video controls>
+            <source src="videos/Glow Logo.mp4" type="video/mp4">
+        </video>
+        <div class="card-content">
+            <h3>Motion Logo</h3>
+            <p>Motion Graphics.</p>
+        </div>
+    </div>
+
+   
+
+    <!-- WEB DEVELOPMENT -->
+
+    <div class="card web">
+        <img src="images/web1.png" alt="">
+        <div class="card-content">
+            <h3>Laravel Website</h3>
+            <p>Custom business website developed in Laravel.</p>
+        </div>
+    </div>
+
+    <div class="card web">
+        <img src="images/web2.png" alt="">
+        <div class="card-content">
+            <h3>WordPress Website</h3>
+            <p>Modern responsive WordPress website.</p>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<div class="modal" id="modal">
+    <span class="close">&times;</span>
+    <img id="modalImg">
+</div>
+
+<div class="portfolio-header">
+    <p>And Many More Projects.</p>
+</div>
+
+<script>
+
+/* FILTER */
+
+const filterButtons=document.querySelectorAll(".filter-btn");
+const cards=document.querySelectorAll(".card");
+
+filterButtons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        filterButtons.forEach(btn=>btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter=button.getAttribute("data-filter");
+
+        cards.forEach(card=>{
+
+            if(filter==="all"){
+                card.style.display="block";
+            }
+            else{
+                if(card.classList.contains(filter)){
+                    card.style.display="block";
+                }
+                else{
+                    card.style.display="none";
+                }
+            }
+
+        });
+
+    });
+
+});
+
+/* IMAGE PREVIEW */
+
+const modal=document.getElementById("modal");
+const modalImg=document.getElementById("modalImg");
+
+document.querySelectorAll(".card img").forEach(img=>{
+
+    img.addEventListener("click",()=>{
+
+        modal.style.display="flex";
+        modalImg.src=img.src;
+
+    });
+
+});
+
+document.querySelector(".close").onclick=()=>{
+    modal.style.display="none";
+};
+
+modal.onclick=(e)=>{
+    if(e.target===modal){
+        modal.style.display="none";
+    }
+};
+
+</script>
+
+</body>
+</html>

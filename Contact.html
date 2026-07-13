@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif
+        }
+
+        body {
+            background: #1f242d;
+            color: #fff
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 9%;
+            display: flex;
+            justify-content: space-between;
+            background: #1f242d;
+            z-index: 100
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none
+        }
+
+        ul {
+            display: flex;
+            list-style: none
+        }
+
+        li {
+            margin-left: 35px
+        }
+
+        li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px
+        }
+
+        li a:hover,
+        .active {
+            color: #7cf03d
+        }
+
+        .bars {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            z-index: -1
+        }
+
+        .bar {
+            flex: 1;
+            background: #1f242d;
+            transform: translateY(-100%);
+            animation: s .5s forwards
+        }
+
+        .bar:nth-child(1) {
+            animation-delay: .6s
+        }
+
+        .bar:nth-child(2) {
+            animation-delay: .5s
+        }
+
+        .bar:nth-child(3) {
+            animation-delay: .4s
+        }
+
+        .bar:nth-child(4) {
+            animation-delay: .3s
+        }
+
+        .bar:nth-child(5) {
+            animation-delay: .2s
+        }
+
+        .bar:nth-child(6) {
+            animation-delay: .1s
+        }
+
+        @keyframes s {
+            to {
+                transform: translateY(0)
+            }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 170px 20px 60px
+        }
+
+        .hero h1 {
+            font-size: 64px
+        }
+
+        .hero span {
+            color: #7cf03d
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 20px auto;
+            color: #ccc
+        }
+
+        .info {
+            width: 80%;
+            max-width: 900px;
+            margin: auto;
+            background: #252b36;
+            padding: 40px;
+            border-radius: 20px
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            font-size: 20px
+        }
+
+        .item i {
+            font-size: 28px;
+            color: #7cf03d;
+            margin-right: 15px
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #7cf03d;
+            border-radius: 40px;
+            color: #1f242d;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 50px
+        }
+
+        .social a {
+            display: flex;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #7cf03d;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            color: #7cf03d;
+            font-size: 22px
+        }
+
+        .social a:hover {
+            background: #7cf03d;
+            color: #1f242d
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #181c23;
+            color: #aaa
+        }
+
+        @media(max-width:768px) {
+            ul {
+                display: none
+            }
+
+            .hero h1 {
+                font-size: 42px
+            }
+
+            .info {
+                width: 92%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar"><a class="logo" href="index.html">Portfolio.</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a class="active" href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="bars">
+        <div class=bar></div>
+        <div class=bar></div>
+        <div class=bar></div>
+        <div class=bar></div>
+        <div class=bar></div>
+        <div class=bar></div>
+    </div>
+    <section class="hero">
+        <h1>Get <span>In Touch</span></h1>
+        <p>I'm available for freelance work, collaborations and exciting opportunities. Feel free to reach out through
+            any of the platforms below.</p>
+    </section>
+    <section class="info">
+        <div class="item"><i class='bx bxs-user'></i>Muhammad Usama</div>
+        <div class="item"><i class='bx bxs-phone'></i>+92 321 9104910</div>
+        <div class="item"><i class='bx bxs-envelope'></i>aslanaslan0311@gmail.com</div>
+        <div class="item"><i class='bx bxs-map'></i>Narowal, Pakistan</div>
+        <a class="btn" target="_blank" href="https://wa.me/+923219104910">Chat on WhatsApp</a>
+    </section>
+    <div class="social">
+        <a target="_blank" href="https://wa.me/+923219104910"><i class='bx bxl-whatsapp'></i></a>
+        <a target="_blank" href="https://www.facebook.com/share/17CzJxNbLt/"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a target="_blank" href="https://www.instagram.com/muhammadusama9163?igsh=MW5mYWZvdTZmeG5qMA=="><i
+                class='bx bxl-instagram-alt'></i></a>
+    </div>
+    <footer>© 2026 Muhammad Usama. All Rights Reserved.</footer>
+</body>
+
+</html>
